@@ -2,7 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import Content from "./Content";
-
+// import "@ant - design/flowchart/dist/index.css";
+import LineChart from "./LineChart";
 function App() {
   const initialData = {
     name: "",
@@ -10,7 +11,6 @@ function App() {
     dob: "",
   };
   const [user, setUser] = useState(initialData);
-
   const [pdf, setPdf] = useState(null);
 
   const onChangeHandler = (e) => {
@@ -84,6 +84,7 @@ function App() {
       <a download="pdf" href={pdf}>
         download
       </a>
+
       <Content user={user} />
     </div>
   );
